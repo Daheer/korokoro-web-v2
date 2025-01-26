@@ -4,12 +4,12 @@ import React, { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
 export default function Demos() {
-  const [currentSlide, setCurrentSlide] = useState(0);
   const [showScrollHint, setShowScrollHint] = useState(true);
 
   useEffect(() => {
     const scrollHintTimer = setTimeout(() => {
       setShowScrollHint(false);
+      console.log(showScrollHint);
     }, 3000);
 
     return () => clearTimeout(scrollHintTimer);
